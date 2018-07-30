@@ -1,0 +1,36 @@
+Thanks for enrolling to Basic Python training.
+
+This training assumes you have basic understanding of programming concepts
+(loops, variables, conditions).
+
+After this training you should:
+- Understand most Python code
+- Write simple apps
+- Apply good programming practices
+- Know commonly used libraries
+
+During this training we will not:
+- Learn a particular Python framework (Django, PyGame, SqlAlchemy) in depth
+- Discuss Python internals and library bindings
+- Discuss advanced Python concepts - decorators, generators
+
+This training is going to focus on Python 3. Even if your codebase is 
+in Python 2, you shouldn't find it hard to adjust.
+
+This training is going to be part lecture and part workshop. You will be writing
+bits of code.
+You can work on your laptop or on a remote server/VM with Internet access.
+To ensure you have a working environment needed for the training, please do the following:
+
+1) Install Python 3.6 (https://www.python.org/downloads/)
+2) Install python-pip (preinstalled on Windows, separate package on Linuxes)
+3) Add your Python installation directory to PATH
+5) Test if your configuration works:
+- open console / cmd.exe
+- run pip install requests
+- type python
+- type import requests
+- type requests.get("http://www.wp.pl")
+- You should see a "Response <200> message"
+
+E-mail me if you have any problems.
