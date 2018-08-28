@@ -52,10 +52,10 @@ The code samples in this presentation are released under the 3-Clause BSD Licens
  :param var_list: list of integers 
  :return: sum of provided integers
  """
- sum = 0
- for var in var_list:
-   sum += var
- return sum
+     sum = 0
+     for var in var_list:
+       sum += var
+     return sum
 
 * How does Python* look?
 - no semicolons or curly braces to define blocks
@@ -104,7 +104,7 @@ Some interesting features:
  >>> a
  5
  >>> b
- 2
+ 2	 
  >>> b, a = a, b
  >>> b
  5
@@ -289,16 +289,23 @@ Open "lorem_ipsum_1k.txt", read it, count how many unique words it contains, cou
    
  # Variable arguments
  def add_integers(*integers):
-   for integer in intergers:
+   for integer in integers:
      print(integer)
    # Returns None by default
-   
+ add_integers(1,2,3,4,5)
+
+ # keyword arguments
+ def add_data(**kwargs):
+   for key, value in kwargs.items():
+     print(value) 
+ add_data(left=3, right=5)
+
 - Functions are just objects.. Try it!
    a = add_integers
    a(2)
 
 * Functions - passing reference or value?
-It depends whether the argument is immutable (string, int, float, bool) or mutable (everything else).
+It depends whether the argument is immutable (string, int, float, bool, tuple) or mutable (everything else).
 
 Immutable:
 
@@ -405,12 +412,11 @@ But watch out:
 - Magic methods - _ _ init _ _(), _ _ eq _ _(), _ _ ne _ _(), _ _ str _ _()
 
 * Classes
-.code inheritance.py
+.code uri.py /UriHandler/,/pass/
 
 * Classes - excercise
-- Implement _ _ ge _ _() magic method so that obj >= obj2 works
-- Implement _ _ str _ _ () magic method and try str(obj) before and after adding it (similar to toString() method in Java/C#)
-- Create a class called OtherChild (not inheriting from Parent) also having self.a set - see if _ _ eq _ _ will work
+- Implement FileHandler.get() so that it can open a file and return file contents
+- Implement UriHandler._ _eq_ _ to compare the value of self.uri instead of references
 
 * Exceptions
 - Exceptions are just normal classes inheriting from Exception
